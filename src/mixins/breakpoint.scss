@@ -1,0 +1,16 @@
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+  "2xl": 1536px,
+);
+
+@mixin breakpoint($names: "sm" "md" "lg" "xl" "2xl") {
+  @each $name in $names {
+    $width: map-get($breakpoints, $name);
+    @media (min-width: $width) {
+      @content ($width);
+    }
+  }
+}

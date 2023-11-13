@@ -1,0 +1,27 @@
+{
+  "name": "utility-css",
+  "version": "0.0.1",
+  "description": "A poor imitation of Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./dist/* && sass ./src/index.scss > ./dist/utility-css.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackingzhang/utility-css.git"
+  },
+  "keywords": [
+    "utility",
+    "css"
+  ],
+  "author": "hackingzhang@outlook.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hackingzhang/utility-css/issues"
+  },
+  "homepage": "https://github.com/hackingzhang/utility-css#readme",
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "sass": "^1.69.5"
+  }
+}

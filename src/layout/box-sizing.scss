@@ -1,0 +1,10 @@
+$box-sizing-maps: (
+  border: "border-box",
+  content: "content-box",
+);
+
+@each $key, $option in $box-sizing-maps {
+ .box-#{$key} {
+    box-sizing: $option;
+  }
+}

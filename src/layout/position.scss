@@ -1,0 +1,53 @@
+@use "sass:list";
+@use "../variable.scss" as *;
+
+$position-values: static relative absolute fixed sticky;
+
+@each $value in $position-values {
+  .#{$value} {
+    position: $value;
+  }
+}
+
+@mixin placement($key, $value) {
+  .inset-#{$key} {
+    inset: $value;
+  }
+  .inset-x-#{$key} {
+    left: $value;
+    right: $value;
+  }
+  .inset-y-#{$key} {
+    top: $value;
+    left: $value;
+  }
+  .start-#{$key} {
+    inset-inline-start: $value;
+  }
+  .end-#{$key} {
+    inset-inline-end: $value;
+  }
+  .top-#{$key} {
+    top: $value;
+  }
+  .left-#{$key} {
+    left: $value;
+  }
+  .right-#{$key} {
+    right: $value;
+  }
+  .bottom-#{$key} {
+    bottom: $value;
+  }
+}
+
+$option-map: list.join(
+  list.join($size-option-map, $size-option-percent-short-map),
+  (
+    "auto": auto,
+  )
+);
+
+@each $key, $value in $option-map {
+  @include placement($key, $value);
+}

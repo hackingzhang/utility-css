@@ -1,0 +1,23 @@
+$break-general-values: auto avoid avoid-page avoid-column;
+$break-extra-values: all page left right column;
+
+@each $value in $break-general-values {
+  .break-after-#{$value} {
+    break-after: $value;
+  }
+  .break-before-#{$value} {
+    break-before: $value;
+  }
+  .break-inside-#{$value} {
+    break-inside: $value;
+  }
+}
+
+@each $value in $break-extra-values {
+  .break-after-#{$value} {
+    break-after: $value;
+  }
+  .break-before-#{$value} {
+    break-before: $value;
+  }
+}

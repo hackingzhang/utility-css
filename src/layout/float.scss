@@ -1,0 +1,7 @@
+$float-values: left right none;
+
+@each $value in $float-values {
+  .float-#{$value} {
+    float: $value;
+  }
+}

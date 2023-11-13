@@ -1,0 +1,8 @@
+@use "../mixins/breakpoint" as *;
+
+.container {
+  max-width: auto;
+  @include breakpoint() using ($width) {
+    max-width: $width;
+  }
+}

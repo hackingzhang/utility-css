@@ -1,0 +1,13 @@
+$overscroll-values: auto contain none;
+
+@each $value in $overscroll-values {
+  .overscroll-#{$value} {
+    overscroll-behavior: $value;
+  }
+  .overscroll-x-#{$value} {
+    overscroll-behavior-x: $value;
+  }
+  .overscroll-y-#{$value} {
+    overscroll-behavior-y: $value;
+  }
+}

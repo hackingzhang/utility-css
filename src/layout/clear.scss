@@ -1,0 +1,7 @@
+$clear-values: left right both none;
+
+@each $value in $clear-values {
+  .clear-#{$value} {
+    float: $value;
+  }
+}

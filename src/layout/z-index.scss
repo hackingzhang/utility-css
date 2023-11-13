@@ -1,0 +1,10 @@
+.z-auto {
+  z-index: auto;
+}
+
+@for $i from 0 through 5 {
+  $value: $i * 10;
+  .z-#{$value} {
+    z-index: $value;
+  }
+}
