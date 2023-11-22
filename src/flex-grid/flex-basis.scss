@@ -1,0 +1,15 @@
+@use "sass:list";
+@use "../variable.scss" as *;
+
+$option-map: list.join(
+  list.join($size-option-map, $size-option-percent-map),
+  (
+    "auto": auto,
+  )
+);
+
+@each $key, $value in $option-map {
+  .basis-#{$key} {
+    flex-basis: $value;
+  }
+}

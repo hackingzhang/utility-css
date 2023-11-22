@@ -1,0 +1,12 @@
+$flex-direction-map: (
+  "row": row,
+  "row-reverse": row-reverse,
+  "col": "column",
+  "col-reverse": "column-reverse",
+);
+
+@each $key, $value in $flex-direction-map {
+  .flex-#{$key} {
+    flex-direction: $value;
+  }
+}

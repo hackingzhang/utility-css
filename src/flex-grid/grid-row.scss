@@ -1,0 +1,27 @@
+@for $i from 1 through 6 {
+  .row-span-#{$i} {
+    grid-row: span $i / span $i;
+  }
+}
+
+@for $i from 1 through 7 {
+  .row-start-#{$i} {
+    grid-row-start: $i;
+  }
+  .row-end-#{$i} {
+    grid-row-start: $i;
+  }
+}
+
+.row-auto {
+  grid-row: auto;
+}
+.row-span-full {
+  grid-row: 1 / -1;
+}
+.col-start-auto {
+  grid-row-start: auto;
+}
+.col-end-auto {
+  grid-row-end: auto;
+}

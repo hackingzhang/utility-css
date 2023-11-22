@@ -1,0 +1,13 @@
+$place-items-map: (
+  "start": start,
+  "end": end,
+  "center": center,
+  "baseline": baseline,
+  "stretch": stretch,
+);
+
+@each $key, $value in $place-items-map {
+  .place-items-#{$key} {
+    place-items: $value;
+  }
+}

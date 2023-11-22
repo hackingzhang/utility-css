@@ -1,0 +1,12 @@
+$grid-auto-columns-map: (
+  "auto": auto,
+  "min": min-content,
+  "max": max-content,
+  "fr": minmax(0, 1fr),
+);
+
+@each $key, $value in $grid-auto-columns-map {
+  .auto-cols-#{$key} {
+    grid-auto-columns: $value;
+  }
+}

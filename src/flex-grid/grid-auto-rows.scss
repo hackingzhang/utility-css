@@ -1,0 +1,12 @@
+$grid-auto-rows-map: (
+  "auto": auto,
+  "min": min-content,
+  "max": max-content,
+  "fr": minmax(0, 1fr),
+);
+
+@each $key, $value in $grid-auto-rows-map {
+  .auto-rows-#{$key} {
+    grid-auto-rows: $value;
+  }
+}

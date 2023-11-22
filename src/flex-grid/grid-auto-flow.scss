@@ -1,0 +1,13 @@
+$grid-auto-flow-map: (
+  "row": row,
+  "col": column,
+  "dense": dense,
+  "row-dense": row dense,
+  "col-dense": column dense,
+);
+
+@each $key, $value in $grid-auto-flow-map {
+  .grid-flow-#{$key} {
+    grid-auto-flow: $value;
+  }
+}

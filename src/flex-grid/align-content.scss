@@ -1,0 +1,17 @@
+$align-content-map: (
+  "normal": normal,
+  "start": flex-start,
+  "end": flex-end,
+  "center": center,
+  "between": space-between,
+  "around": space-around,
+  "evenly": space-evenly,
+  "baseline": baseline,
+  "stretch": stretch,
+);
+
+@each $key, $value in $align-content-map {
+  .content-#{$key} {
+    align-content: $value;
+  }
+}

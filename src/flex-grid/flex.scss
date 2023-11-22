@@ -1,0 +1,30 @@
+.flex {
+  &-1 {
+    flex: 1 1 0%;
+  }
+
+  &-auto {
+    flex: 1 1 auto;
+  }
+  &-initial {
+    flex: 0 1 auto;
+  }
+  &-none {
+    flex: none;
+  }
+}
+
+.grow {
+  flex-grow: 1;
+  &-0 {
+    flex-grow: 0;
+  }
+}
+
+.shrink {
+  flex-shrink: 1;
+
+  &-0 {
+    flex-shrink: 0;
+  }
+}

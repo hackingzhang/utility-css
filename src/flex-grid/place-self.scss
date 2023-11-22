@@ -1,0 +1,13 @@
+$place-self-map: (
+  "auto": auto,
+  "start": start,
+  "end": end,
+  "center": center,
+  "stretch": stretch,
+);
+
+@each $key, $value in $place-self-map {
+  .place-self-#{$key} {
+    place-self: $value;
+  }
+}
