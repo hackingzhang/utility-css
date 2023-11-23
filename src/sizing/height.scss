@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "../variable.scss" as variable;
+
+$height-option-map: map.merge(
+  variable.$size-option-map,
+  variable.generate-percent-map-until(6)
+);
+$height-option-map: map.merge(
+  $height-option-map,
+  (
+    "full": "100%",
+    "auto": auto,
+    "screen": 100vh,
+    "min": min-content,
+    "max": max-content,
+    "fit": fit-content,
+  )
+);
+
+@each $key, $value in $height-option-map {
+  .h-#{$key} {
+    height: $value;
+  }
+}
