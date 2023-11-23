@@ -1,0 +1,10 @@
+@use "../variable.scss" as variable;
+
+@each $key, $value in variable.$size-option-map {
+  .space-x-#{$key} > * + * {
+    margin-left: $value;
+  }
+  .space-y-#{$key} > * + * {
+    margin-top: $value;
+  }
+}

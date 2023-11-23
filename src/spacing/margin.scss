@@ -1,0 +1,41 @@
+@use "sass:list";
+@use "../variable.scss" as variable;
+
+$margin-option-map: list.join(
+  variable.$size-option-map,
+  (
+    "auto": auto,
+  )
+);
+
+@each $key, $value in $margin-option-map {
+  .m-#{$key} {
+    margin: $value;
+  }
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+  .ms-#{$key} {
+    margin-inline-start: $value;
+  }
+  .me-#{$key} {
+    margin-inline-end: $value;
+  }
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+}

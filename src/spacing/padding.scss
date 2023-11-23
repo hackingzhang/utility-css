@@ -1,0 +1,33 @@
+@use "../variable.scss" as variable;
+
+@each $key, $value in variable.$size-option-map {
+  .p-#{$key} {
+    padding: $value;
+  }
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+  .ps-#{$key} {
+    padding-inline-start: $value;
+  }
+  .pe-#{$key} {
+    padding-inline-end: $value;
+  }
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+}
