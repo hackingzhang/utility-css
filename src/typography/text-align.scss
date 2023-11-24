@@ -1,0 +1,7 @@
+$text-align-values: left right center justify start end;
+
+@each $value in $text-align-values {
+  .text-#{$value} {
+    text-align: $value;
+  }
+}

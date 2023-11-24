@@ -1,0 +1,12 @@
+$text-transform-map: (
+  "uppercase": uppercase,
+  "lowercase": lowercase,
+  "capitalize": capitalize,
+  "none": none,
+);
+
+@each $key, $value in $text-transform-map {
+  .#{$key} {
+    text-transform: $value;
+  }
+}

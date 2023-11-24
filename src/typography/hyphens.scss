@@ -1,0 +1,7 @@
+$hyphens-values: none manual auto;
+
+@each $value in $hyphens-values {
+  .hyphens-#{$value} {
+    hyphens: $value;
+  }
+}

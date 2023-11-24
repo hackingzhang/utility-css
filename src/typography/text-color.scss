@@ -1,0 +1,15 @@
+$text-color-map: (
+  "inherit": inherit,
+  "current": "currentColor",
+  "transparent": transparent,
+  "black": black,
+  "white": white,
+);
+
+@each $key, $value in $text-color-map {
+  .text-#{$key} {
+    color: $value;
+  }
+}
+
+// TODO: More color
