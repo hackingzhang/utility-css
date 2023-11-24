@@ -1,0 +1,7 @@
+$background-size-values: auto contain cover;
+
+@each $value in $background-size-values {
+  .bg-#{$value} {
+    background-size: $value;
+  }
+}

@@ -1,0 +1,11 @@
+$background-origin-map: (
+  "border": border-box,
+  "padding": padding-box,
+  "content": content-box,
+);
+
+@each $key, $value in $background-origin-map {
+  .bg-origin-#{$key} {
+    background-origin: $value;
+  }
+}

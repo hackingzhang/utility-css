@@ -1,0 +1,12 @@
+$background-clip-map: (
+  "border": border-box,
+  "padding": padding-box,
+  "content": content-box,
+  "text": text,
+);
+
+@each $key, $value in $background-clip-map {
+  .bg-clip-#{$key} {
+    background-clip: $value;
+  }
+}

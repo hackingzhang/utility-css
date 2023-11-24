@@ -1,0 +1,20 @@
+.bg-none {
+  background-image: none;
+}
+
+$gradient-direction-map: (
+  "t": top,
+  "tr": top right,
+  "r": right,
+  "br": bottom right,
+  "b": bottom,
+  "bl": bottom left,
+  "l": left,
+  "tl": top left,
+);
+
+@each $key, $value in $gradient-direction-map {
+  .bg-gradient-to-#{$key} {
+    background-image: linear-gradient(to $value, var(--tw-gradient-stops));
+  }
+}
