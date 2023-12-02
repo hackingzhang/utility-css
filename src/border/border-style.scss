@@ -1,0 +1,7 @@
+$border-style-values: solid dashed dotted double hidden none;
+
+@each $value in $border-style-values {
+  .border-#{$value} {
+    border-style: $value;
+  }
+}

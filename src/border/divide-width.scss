@@ -1,0 +1,42 @@
+$divide-width-map: (
+  "-0": 0px,
+  "-2": 2px,
+  "-4": 4px,
+  "-8": 8px,
+  "": 1px,
+);
+
+@mixin divide-width {
+  @each $key, $value in $divide-width-map {
+    &#{$key} {
+      @content ($value);
+    }
+  }
+}
+
+.divide {
+  &-x {
+    @include divide-width using ($value) {
+      & > * + * {
+        border-left-width: $value;
+        border-right-width: 0px;
+      }
+    }
+
+    &-reverse > * + * {
+      --tw-divide-x-reverse: 1;
+    }
+  }
+  &-y {
+    @include divide-width using ($value) {
+      & > * + * {
+        border-top-width: $value;
+        border-bottom-width: 0;
+      }
+    }
+
+    &-reverse > * + * {
+      --tw-divide-y-reverse: 1;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+$divide-style-values: solid dashed dotted double hidden none;
+
+@each $value in $divide-style-values {
+  .divide-#{$value} > * + * {
+    border-style: $value;
+  }
+}

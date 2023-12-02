@@ -1,0 +1,41 @@
+$border-color-map: (
+  "inherit": inherit,
+  "current": currentColor,
+  "transparent": transparent,
+  "black": rgb(0, 0, 0),
+  "white": rgb(255, 255, 255),
+);
+
+@each $key, $value in $border-color-map {
+  .border-#{$key} {
+    border-color: $value;
+  }
+  .border-x-#{key} {
+    border-left-color: $value;
+    border-right-color: $value;
+  }
+  .border-y-#{key} {
+    border-top-color: $value;
+    border-bottom-color: $value;
+  }
+  .border-s-#{key} {
+    border-inline-start-color: $value;
+  }
+  .border-e-#{key} {
+    border-inline-end-color: $value;
+  }
+  .border-t-#{key} {
+    border-top-color: $value;
+  }
+  .border-r-#{key} {
+    border-right-color: $value;
+  }
+  .border-b-#{key} {
+    border-bottom-color: $value;
+  }
+  .border-l-#{key} {
+    border-left-color: $value;
+  }
+}
+
+// TODO: More color

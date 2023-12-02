@@ -1,4 +1,4 @@
-$background-color-map: (
+$outline-color-map: (
   "inherit": inherit,
   "current": currentColor,
   "transparent": transparent,
@@ -6,9 +6,9 @@ $background-color-map: (
   "white": rgb(255, 255, 255),
 );
 
-@each $key, $value in $background-color-map {
-  .bg-#{$key} {
-    background-color: $value;
+@each $key, $value in $outline-color-map {
+  .outline-#{$key} {
+    outline-color: $value;
   }
 }
 

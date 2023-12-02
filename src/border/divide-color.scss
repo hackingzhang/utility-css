@@ -1,4 +1,4 @@
-$background-color-map: (
+$divide-color-map: (
   "inherit": inherit,
   "current": currentColor,
   "transparent": transparent,
@@ -6,9 +6,9 @@ $background-color-map: (
   "white": rgb(255, 255, 255),
 );
 
-@each $key, $value in $background-color-map {
-  .bg-#{$key} {
-    background-color: $value;
+@each $key, $value in $divide-color-map {
+  .deivide-#{$key} > * + * {
+    border-color: $value;
   }
 }
 

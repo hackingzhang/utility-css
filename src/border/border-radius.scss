@@ -1,0 +1,102 @@
+$border-radius-size-map: (
+  "-none": 0px,
+  "-sm": 0.125rem,
+  "": 0.25rem,
+  "-md": 0.375rem,
+  "-lg": 0.5rem,
+  "-xl": 0.75rem,
+  "-2xl": 1rem,
+  "-3xl": 1.5rem,
+  "-full": 9999px,
+);
+
+@mixin rounded {
+  @each $key, $value in $border-radius-size-map {
+    &#{$key} {
+      @content ($value);
+    }
+  }
+}
+
+.rounded {
+  @include rounded using ($value) {
+    border-radius: $value;
+  }
+
+  &-s {
+    @include rounded() using ($value) {
+      border-start-start-radius: $value;
+      border-end-start-radius: $value;
+    }
+  }
+  &-e {
+    @include rounded() using ($value) {
+      border-start-end-radius: $value;
+      border-end-end-radius: $value;
+    }
+  }
+  &-t {
+    @include rounded() using ($value) {
+      border-top-left-radius: $value;
+      border-top-right-radius: $value;
+    }
+  }
+  &-r {
+    @include rounded() using ($value) {
+      border-top-right-radius: $value;
+      border-bottom-right-radius: $value;
+    }
+  }
+  &-b {
+    @include rounded() using ($value) {
+      border-bottom-left-radius: $value;
+      border-bottom-right-radius: $value;
+    }
+  }
+  &-l {
+    @include rounded() using ($value) {
+      border-top-left-radius: $value;
+      border-bottom-left-radius: $value;
+    }
+  }
+  &-ss {
+    @include rounded() using ($value) {
+      border-start-start-radius: $value;
+    }
+  }
+  &-se {
+    @include rounded() using ($value) {
+      border-start-end-radius: $value;
+    }
+  }
+  &-ee {
+    @include rounded() using ($value) {
+      border-end-end-radius: $value;
+    }
+  }
+  &-es {
+    @include rounded() using ($value) {
+      border-end-start-radius: $value;
+    }
+  }
+  &-tl {
+    @include rounded() using ($value) {
+      border-top-left-radius: $value;
+    }
+  }
+  &-tr {
+    @include rounded() using ($value) {
+      border-top-right-radius: $value;
+    }
+  }
+  &-br {
+    @include rounded() using ($value) {
+      border-bottom-right-radius: $value;
+    }
+  }
+  &-bl {
+    @include rounded() using ($value) {
+      border-bottom-left-radius: $value;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+$outline-style-map: (
+  "": solid,
+  "-dashed": dashed,
+  "-dotted": dotted,
+  "-double": double,
+);
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+@each $key, $value in $outline-style-map {
+  .outline#{$key} {
+    outline-style: $value;
+  }
+}

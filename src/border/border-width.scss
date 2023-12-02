@@ -1,0 +1,64 @@
+$border-width-map: (
+  "-0": 0px,
+  "-2": 2px,
+  "-4": 4px,
+  "-8": 8px,
+  "": 1px,
+);
+
+@mixin border-width {
+  @each $key, $value in $border-width-map {
+    &#{$key} {
+      @content ($value);
+    }
+  }
+}
+
+.border {
+  @include border-width using ($value) {
+    border-width: $value;
+  }
+
+  &-x {
+    @include border-width using ($value) {
+      border-left-width: $value;
+      border-right-width: $value;
+    }
+  }
+  &-y {
+    @include border-width using ($value) {
+      border-top-width: $value;
+      border-bottom-width: $value;
+    }
+  }
+  &-s {
+    @include border-width using ($value) {
+      border-inline-start-width: $value;
+    }
+  }
+  &-e {
+    @include border-width using ($value) {
+      border-inline-end-width: $value;
+    }
+  }
+  &-t {
+    @include border-width using ($value) {
+      border-top-width: $value;
+    }
+  }
+  &-r {
+    @include border-width using ($value) {
+      border-right-width: $value;
+    }
+  }
+  &-b {
+    @include border-width using ($value) {
+      border-bottom-width: $value;
+    }
+  }
+  &-l {
+    @include border-width using ($value) {
+      border-left-width: $value;
+    }
+  }
+}
