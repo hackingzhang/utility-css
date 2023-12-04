@@ -8,7 +8,7 @@ $ring-color-map: (
 
 @each $key, $value in $ring-color-map {
   .ring-#{$key} {
-    --tw-ring-color: $value;
+    --tw-ring-color: #{$value};
   }
 }
 
