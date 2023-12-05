@@ -1,0 +1,9 @@
+$blend-values: normal multiply screen overlay darken lighten color-dodge
+  color-burn hard-light soft-light difference exclusion hue saturation color
+  luminosity;
+
+@each $value in $blend-values {
+  .bg-blend-#{$value} {
+    background-blend-mode: $value;
+  }
+}

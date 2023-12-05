@@ -1,0 +1,14 @@
+$color-map: (
+  "inherit": inherit,
+  "current": currentColor,
+  "transparent": transparent,
+  "black": rgb(0, 0, 0),
+  "white": rgb(255, 255, 255),
+);
+
+@each $key, $value in $color-map {
+  .shadow-#{$key} {
+    --tw-shadow-color: #{$value};
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+}
