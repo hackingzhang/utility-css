@@ -1,0 +1,7 @@
+$duration-values: 0 75 100 150 200 300 500 700 1000;
+
+@each $value in $duration-values {
+  .duration-#{$value} {
+    transition-duration: #{$value}ms;
+  }
+}
