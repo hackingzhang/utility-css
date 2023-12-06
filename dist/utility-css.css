@@ -10495,3 +10495,599 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+.scale-0, .scale-x-0, .scale-y-0, .scale-50, .scale-x-50, .scale-y-50, .scale-75, .scale-x-75, .scale-y-75, .scale-90, .scale-x-90, .scale-y-90, .scale-95, .scale-x-95, .scale-y-95, .scale-100, .scale-x-100, .scale-y-100, .scale-105, .scale-x-105, .scale-y-105, .scale-110, .scale-x-110, .scale-y-110, .scale-125, .scale-x-125, .scale-y-125, .scale-150, .scale-x-150, .scale-y-150, .rotate-0, .rotate-1, .rotate-2, .rotate-3, .rotate-6, .rotate-12, .rotate-45, .rotate-90, .rotate-180, .translate-x-0, .translate-y-0, .translate-x-px, .translate-y-px, .translate-x-0\.5, .translate-y-0\.5, .translate-x-1, .translate-y-1, .translate-x-1\.5, .translate-y-1\.5, .translate-x-2, .translate-y-2, .translate-x-2\.5, .translate-y-2\.5, .translate-x-3, .translate-y-3, .translate-x-3\.5, .translate-y-3\.5, .translate-x-4, .translate-y-4, .translate-x-5, .translate-y-5, .translate-x-6, .translate-y-6, .translate-x-7, .translate-y-7, .translate-x-8, .translate-y-8, .translate-x-9, .translate-y-9, .translate-x-10, .translate-y-10, .translate-x-11, .translate-y-11, .translate-x-12, .translate-y-12, .translate-x-14, .translate-y-14, .translate-x-16, .translate-y-16, .translate-x-20, .translate-y-20, .translate-x-24, .translate-y-24, .translate-x-28, .translate-y-28, .translate-x-32, .translate-y-32, .translate-x-36, .translate-y-36, .translate-x-40, .translate-y-40, .translate-x-44, .translate-y-44, .translate-x-48, .translate-y-48, .translate-x-52, .translate-y-52, .translate-x-56, .translate-y-56, .translate-x-60, .translate-y-60, .translate-x-64, .translate-y-64, .translate-x-72, .translate-y-72, .translate-x-80, .translate-y-80, .translate-x-96, .translate-y-96, .translate-x-1\/2, .translate-y-1\/2, .translate-x-1\/3, .translate-y-1\/3, .translate-x-2\/3, .translate-y-2\/3, .translate-x-1\/4, .translate-y-1\/4, .translate-x-2\/4, .translate-y-2\/4, .translate-x-3\/4, .translate-y-3\/4, .translate-x-full, .translate-y-full, .skew-x-0, .skew-y-0, .skew-x-1, .skew-y-1, .skew-x-2, .skew-y-2, .skew-x-3, .skew-y-3, .skew-x-6, .skew-y-6, .skew-x-12, .skew-y-12, .skew-x-45, .skew-y-45, .skew-x-90, .skew-y-90, .skew-x-180, .skew-y-180 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-rotate: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  transform: scale(var(--tw-scale-x), var(--tw-scale-y)) translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x), var(--tw-skew-y));
+}
+
+.scale-0 {
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+}
+
+.scale-x-0 {
+  --tw-scale-x: 0;
+}
+
+.scale-y-0 {
+  --tw-scale-y: 0;
+}
+
+.scale-50 {
+  --tw-scale-x: 0.5;
+  --tw-scale-y: 0.5;
+}
+
+.scale-x-50 {
+  --tw-scale-x: 0.5;
+}
+
+.scale-y-50 {
+  --tw-scale-y: 0.5;
+}
+
+.scale-75 {
+  --tw-scale-x: 0.75;
+  --tw-scale-y: 0.75;
+}
+
+.scale-x-75 {
+  --tw-scale-x: 0.75;
+}
+
+.scale-y-75 {
+  --tw-scale-y: 0.75;
+}
+
+.scale-90 {
+  --tw-scale-x: 0.9;
+  --tw-scale-y: 0.9;
+}
+
+.scale-x-90 {
+  --tw-scale-x: 0.9;
+}
+
+.scale-y-90 {
+  --tw-scale-y: 0.9;
+}
+
+.scale-95 {
+  --tw-scale-x: 0.95;
+  --tw-scale-y: 0.95;
+}
+
+.scale-x-95 {
+  --tw-scale-x: 0.95;
+}
+
+.scale-y-95 {
+  --tw-scale-y: 0.95;
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+}
+
+.scale-x-100 {
+  --tw-scale-x: 1;
+}
+
+.scale-y-100 {
+  --tw-scale-y: 1;
+}
+
+.scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+}
+
+.scale-x-105 {
+  --tw-scale-x: 1.05;
+}
+
+.scale-y-105 {
+  --tw-scale-y: 1.05;
+}
+
+.scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+}
+
+.scale-x-110 {
+  --tw-scale-x: 1.1;
+}
+
+.scale-y-110 {
+  --tw-scale-y: 1.1;
+}
+
+.scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+}
+
+.scale-x-125 {
+  --tw-scale-x: 1.25;
+}
+
+.scale-y-125 {
+  --tw-scale-y: 1.25;
+}
+
+.scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+}
+
+.scale-x-150 {
+  --tw-scale-x: 1.5;
+}
+
+.scale-y-150 {
+  --tw-scale-y: 1.5;
+}
+
+.rotate-0 {
+  --tw-rotate: 0deg;
+}
+
+.rotate-1 {
+  --tw-rotate: 1deg;
+}
+
+.rotate-2 {
+  --tw-rotate: 2deg;
+}
+
+.rotate-3 {
+  --tw-rotate: 3deg;
+}
+
+.rotate-6 {
+  --tw-rotate: 6deg;
+}
+
+.rotate-12 {
+  --tw-rotate: 12deg;
+}
+
+.rotate-45 {
+  --tw-rotate: 45deg;
+}
+
+.rotate-90 {
+  --tw-rotate: 90deg;
+}
+
+.rotate-180 {
+  --tw-rotate: 180deg;
+}
+
+.translate-x-0 {
+  --tw-translate-x: 0px;
+}
+
+.translate-y-0 {
+  --tw-translate-y: 0px;
+}
+
+.translate-x-px {
+  --tw-translate-x: 1px;
+}
+
+.translate-y-px {
+  --tw-translate-y: 1px;
+}
+
+.translate-x-0\.5 {
+  --tw-translate-x: 0.125rem;
+}
+
+.translate-y-0\.5 {
+  --tw-translate-y: 0.125rem;
+}
+
+.translate-x-1 {
+  --tw-translate-x: 0.25rem;
+}
+
+.translate-y-1 {
+  --tw-translate-y: 0.25rem;
+}
+
+.translate-x-1\.5 {
+  --tw-translate-x: 0.375rem;
+}
+
+.translate-y-1\.5 {
+  --tw-translate-y: 0.375rem;
+}
+
+.translate-x-2 {
+  --tw-translate-x: 0.5rem;
+}
+
+.translate-y-2 {
+  --tw-translate-y: 0.5rem;
+}
+
+.translate-x-2\.5 {
+  --tw-translate-x: 0.625rem;
+}
+
+.translate-y-2\.5 {
+  --tw-translate-y: 0.625rem;
+}
+
+.translate-x-3 {
+  --tw-translate-x: 0.75rem;
+}
+
+.translate-y-3 {
+  --tw-translate-y: 0.75rem;
+}
+
+.translate-x-3\.5 {
+  --tw-translate-x: 0.875rem;
+}
+
+.translate-y-3\.5 {
+  --tw-translate-y: 0.875rem;
+}
+
+.translate-x-4 {
+  --tw-translate-x: 1rem;
+}
+
+.translate-y-4 {
+  --tw-translate-y: 1rem;
+}
+
+.translate-x-5 {
+  --tw-translate-x: 1.25rem;
+}
+
+.translate-y-5 {
+  --tw-translate-y: 1.25rem;
+}
+
+.translate-x-6 {
+  --tw-translate-x: 1.5rem;
+}
+
+.translate-y-6 {
+  --tw-translate-y: 1.5rem;
+}
+
+.translate-x-7 {
+  --tw-translate-x: 1.75rem;
+}
+
+.translate-y-7 {
+  --tw-translate-y: 1.75rem;
+}
+
+.translate-x-8 {
+  --tw-translate-x: 2rem;
+}
+
+.translate-y-8 {
+  --tw-translate-y: 2rem;
+}
+
+.translate-x-9 {
+  --tw-translate-x: 2.25rem;
+}
+
+.translate-y-9 {
+  --tw-translate-y: 2.25rem;
+}
+
+.translate-x-10 {
+  --tw-translate-x: 2.5rem;
+}
+
+.translate-y-10 {
+  --tw-translate-y: 2.5rem;
+}
+
+.translate-x-11 {
+  --tw-translate-x: 2.75rem;
+}
+
+.translate-y-11 {
+  --tw-translate-y: 2.75rem;
+}
+
+.translate-x-12 {
+  --tw-translate-x: 3rem;
+}
+
+.translate-y-12 {
+  --tw-translate-y: 3rem;
+}
+
+.translate-x-14 {
+  --tw-translate-x: 3.5rem;
+}
+
+.translate-y-14 {
+  --tw-translate-y: 3.5rem;
+}
+
+.translate-x-16 {
+  --tw-translate-x: 4rem;
+}
+
+.translate-y-16 {
+  --tw-translate-y: 4rem;
+}
+
+.translate-x-20 {
+  --tw-translate-x: 5rem;
+}
+
+.translate-y-20 {
+  --tw-translate-y: 5rem;
+}
+
+.translate-x-24 {
+  --tw-translate-x: 6rem;
+}
+
+.translate-y-24 {
+  --tw-translate-y: 6rem;
+}
+
+.translate-x-28 {
+  --tw-translate-x: 7rem;
+}
+
+.translate-y-28 {
+  --tw-translate-y: 7rem;
+}
+
+.translate-x-32 {
+  --tw-translate-x: 8rem;
+}
+
+.translate-y-32 {
+  --tw-translate-y: 8rem;
+}
+
+.translate-x-36 {
+  --tw-translate-x: 9rem;
+}
+
+.translate-y-36 {
+  --tw-translate-y: 9rem;
+}
+
+.translate-x-40 {
+  --tw-translate-x: 10rem;
+}
+
+.translate-y-40 {
+  --tw-translate-y: 10rem;
+}
+
+.translate-x-44 {
+  --tw-translate-x: 11rem;
+}
+
+.translate-y-44 {
+  --tw-translate-y: 11rem;
+}
+
+.translate-x-48 {
+  --tw-translate-x: 12rem;
+}
+
+.translate-y-48 {
+  --tw-translate-y: 12rem;
+}
+
+.translate-x-52 {
+  --tw-translate-x: 13rem;
+}
+
+.translate-y-52 {
+  --tw-translate-y: 13rem;
+}
+
+.translate-x-56 {
+  --tw-translate-x: 14rem;
+}
+
+.translate-y-56 {
+  --tw-translate-y: 14rem;
+}
+
+.translate-x-60 {
+  --tw-translate-x: 15rem;
+}
+
+.translate-y-60 {
+  --tw-translate-y: 15rem;
+}
+
+.translate-x-64 {
+  --tw-translate-x: 16rem;
+}
+
+.translate-y-64 {
+  --tw-translate-y: 16rem;
+}
+
+.translate-x-72 {
+  --tw-translate-x: 18rem;
+}
+
+.translate-y-72 {
+  --tw-translate-y: 18rem;
+}
+
+.translate-x-80 {
+  --tw-translate-x: 20rem;
+}
+
+.translate-y-80 {
+  --tw-translate-y: 20rem;
+}
+
+.translate-x-96 {
+  --tw-translate-x: 24rem;
+}
+
+.translate-y-96 {
+  --tw-translate-y: 24rem;
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
+}
+
+.translate-y-1\/2 {
+  --tw-translate-y: 50%;
+}
+
+.translate-x-1\/3 {
+  --tw-translate-x: 33.3333333333%;
+}
+
+.translate-y-1\/3 {
+  --tw-translate-y: 33.3333333333%;
+}
+
+.translate-x-2\/3 {
+  --tw-translate-x: 66.6666666667%;
+}
+
+.translate-y-2\/3 {
+  --tw-translate-y: 66.6666666667%;
+}
+
+.translate-x-1\/4 {
+  --tw-translate-x: 25%;
+}
+
+.translate-y-1\/4 {
+  --tw-translate-y: 25%;
+}
+
+.translate-x-2\/4 {
+  --tw-translate-x: 50%;
+}
+
+.translate-y-2\/4 {
+  --tw-translate-y: 50%;
+}
+
+.translate-x-3\/4 {
+  --tw-translate-x: 75%;
+}
+
+.translate-y-3\/4 {
+  --tw-translate-y: 75%;
+}
+
+.translate-x-full {
+  --tw-translate-x: 100%;
+}
+
+.translate-y-full {
+  --tw-translate-y: 100%;
+}
+
+.skew-x-0 {
+  --tw-skew-x: 0deg;
+}
+
+.skew-y-0 {
+  --tw-skew-y: 0deg;
+}
+
+.skew-x-1 {
+  --tw-skew-x: 1deg;
+}
+
+.skew-y-1 {
+  --tw-skew-y: 1deg;
+}
+
+.skew-x-2 {
+  --tw-skew-x: 2deg;
+}
+
+.skew-y-2 {
+  --tw-skew-y: 2deg;
+}
+
+.skew-x-3 {
+  --tw-skew-x: 3deg;
+}
+
+.skew-y-3 {
+  --tw-skew-y: 3deg;
+}
+
+.skew-x-6 {
+  --tw-skew-x: 6deg;
+}
+
+.skew-y-6 {
+  --tw-skew-y: 6deg;
+}
+
+.skew-x-12 {
+  --tw-skew-x: 12deg;
+}
+
+.skew-y-12 {
+  --tw-skew-y: 12deg;
+}
+
+.origin-center {
+  transform-origin: center;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+.origin-top-roght {
+  transform-origin: top right;
+}
+
+.origin-right {
+  transform-origin: right;
+}
+
+.origin-bottom-right {
+  transform-origin: bottom right;
+}
+
+.origin-bottom {
+  transform-origin: bottom;
+}
+
+.origin-bottom-left {
+  transform-origin: bottom left;
+}
+
+.origin-left {
+  transform-origin: left;
+}
+
+.origin-top-left {
+  transform-origin: top left;
+}

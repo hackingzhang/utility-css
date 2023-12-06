@@ -1,0 +1,91 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:list";
+@use "../variable.scss" as variable;
+
+$scale-values: 0 50 75 90 95 100 105 110 125 150;
+$rotate-degree-values: 0 1 2 3 6 12 45 90 180;
+$translate-size-map: map.merge(
+  variable.$size-option-map,
+  variable.$size-option-percent-short-map
+);
+$skew-values: 0 1 2 3 6 12;
+$classes: ();
+
+@each $value in $scale-values {
+  $classes: list.append($classes, ".scale-#{$value}", $separator: comma);
+  $classes: list.append($classes, ".scale-x-#{$value}", $separator: comma);
+  $classes: list.append($classes, ".scale-y-#{$value}", $separator: comma);
+}
+@each $value in $rotate-degree-values {
+  $classes: list.append($classes, ".rotate-#{$value}", $separator: comma);
+}
+@each $key, $value in $translate-size-map {
+  $classes: list.append($classes, ".translate-x-#{$key}", $separator: comma);
+  $classes: list.append($classes, ".translate-y-#{$key}", $separator: comma);
+}
+@each $value in $rotate-degree-values {
+  $classes: list.append($classes, ".skew-x-#{$value}", $separator: comma);
+  $classes: list.append($classes, ".skew-y-#{$value}", $separator: comma);
+}
+
+#{$classes} {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-rotate: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+
+  transform: scale(var(--tw-scale-x), var(--tw-scale-y))
+    translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x), var(--tw-skew-y));
+}
+
+// Scale
+@each $value in $scale-values {
+  $ratio: math.div($value, 100);
+
+  .scale-#{$value} {
+    --tw-scale-x: #{$ratio};
+    --tw-scale-y: #{$ratio};
+  }
+  .scale-x-#{$value} {
+    --tw-scale-x: #{$ratio};
+  }
+  .scale-y-#{$value} {
+    --tw-scale-y: #{$ratio};
+  }
+}
+
+// Rotate
+@each $value in $rotate-degree-values {
+  $degree: #{$value}deg;
+
+  .rotate-#{$value} {
+    --tw-rotate: #{$degree};
+  }
+}
+
+// Translate
+@each $key, $value in $translate-size-map {
+  .translate-x-#{$key} {
+    --tw-translate-x: #{$value};
+  }
+  .translate-y-#{$key} {
+    --tw-translate-y: #{$value};
+  }
+}
+
+// Skew
+@each $value in $skew-values {
+  $degree: #{$value}deg;
+
+  .skew-x-#{$value} {
+    --tw-skew-x: #{$degree};
+  }
+  .skew-y-#{$value} {
+    --tw-skew-y: #{$degree};
+  }
+}

@@ -1,0 +1,17 @@
+$origin-maps: (
+  "center": center,
+  "top": top,
+  "top-roght": top right,
+  "right": right,
+  "bottom-right": bottom right,
+  "bottom": bottom,
+  "bottom-left": bottom left,
+  "left": left,
+  "top-left": top left,
+);
+
+@each $key, $value in $origin-maps {
+  .origin-#{$key} {
+    transform-origin: $value;
+  }
+}

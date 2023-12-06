@@ -85,7 +85,6 @@ $size-option-percent-short-map: map.merge(
     "full": 100%,
   )
 );
-@debug $size-option-percent-short-map;
 
 $size-option-percent-map: map.merge(
   generate-percent-map-until(6),
@@ -96,4 +95,3 @@ $size-option-percent-map: map.merge(
     )
   )
 );
-@debug $size-option-percent-map;
