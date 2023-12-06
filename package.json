@@ -4,7 +4,7 @@
   "description": "A poor imitation of Tailwind CSS",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf ./dist/* && sass ./src/index.scss > ./dist/utility-css.css"
+    "build": "node scripts/build.js"
   },
   "repository": {
     "type": "git",
