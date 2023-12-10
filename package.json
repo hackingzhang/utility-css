@@ -1,8 +1,8 @@
 {
-  "name": "utility-css",
+  "name": "@hackingzhang/utility-css",
   "version": "0.0.1",
-  "description": "A poor imitation of Tailwind CSS",
-  "main": "index.js",
+  "description": "CSS part of Tailwind CSS",
+  "main": "src/index.scss",
   "scripts": {
     "build": "node scripts/build.js"
   },
