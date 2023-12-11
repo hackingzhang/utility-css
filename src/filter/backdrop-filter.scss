@@ -1,0 +1,131 @@
+@use "sass:list";
+@use "sass:math";
+
+$blur-maps: (
+  "-none": 0,
+  "-sm": 4px,
+  "": 8px,
+  "-md": 12px,
+  "-lg": 16px,
+  "-xl": 24px,
+  "-2xl": 40px,
+  "-3xl": 64px,
+);
+$brightness-values: 0 50 75 90 95 100 105 110 125 150 200;
+$contrast-values: 0 50 75 100 125 150 200;
+$hue-rotate-values: 0 15 30 60 90 180;
+$saturate-values: 0 50 75 100 125 150 200;
+
+$classes: (
+  ".backdrop-grayscale-0",
+  ".backdrop-grayscale",
+  ".backdrop-invert-0",
+  ".backdrop-invert",
+  ".backdrop-sepia-0",
+  ".backdrop-sepia"
+);
+@each $key, $value in $blur-maps {
+  $classes: list.append($classes, ".backdrop-blur#{$key}", $separator: comma);
+}
+@each $value in $brightness-values {
+  $classes: list.append(
+    $classes,
+    ".backdrop-brightness-#{$value}",
+    $separator: comma
+  );
+}
+@each $value in $contrast-values {
+  $classes: list.append(
+    $classes,
+    ".backdrop-contrast-#{$value}",
+    $separator: comma
+  );
+}
+@each $value in $hue-rotate-values {
+  $classes: list.append(
+    $classes,
+    ".backdrop-hue-rotate-#{$value}",
+    $separator: comma
+  );
+}
+@each $value in $saturate-values {
+  $classes: list.append(
+    $classes,
+    ".backdrop-saturate-#{$value}",
+    $separator: comma
+  );
+}
+#{$classes} {
+  --tw-backdrop-blur: blur(0);
+  --tw-backdrop-brightness: brightness(1);
+  --tw-backdrop-contrast: contrast(1);
+  --tw-backdrop-grayscale: grayscale(0);
+  --tw-backdrop-hue-rotate: hue-rotate(0deg);
+  --tw-backdrop-invert: invert(0);
+  --tw-backdrop-saturate: saturate(1);
+  --tw-backdrop-sepia: sepia(0);
+
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness)
+    var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale)
+    var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert)
+    var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+// Blur
+@each $key, $value in $blur-maps {
+  .backdrop-blur#{$key} {
+    --tw-backdrop-blur: blur(#{$value});
+  }
+}
+
+// Brightness
+@each $value in $brightness-values {
+  .backdrop-brightness-#{$value} {
+    --tw-backdrop-brightness: brightness(#{math.div($value, 100)});
+  }
+}
+
+// Contrast
+@each $value in $contrast-values {
+  .backdrop-contrast-#{$value} {
+    --tw-backdrop-contrast: contrast(#{math.div($value, 100)});
+  }
+}
+
+// Grayscale
+.backdrop-grayscale-0 {
+  --tw-backdrop-grayscale: grayscale(0);
+}
+.backdrop-grayscale {
+  --tw-backdrop-grayscale: grayscale(100%);
+}
+
+// Hue rotate
+@each $value in $hue-rotate-values {
+  .backdrop-hue-rotate-#{$value} {
+    --tw-backdrop-hue-rotate: hue-rotate(#{$value}deg);
+  }
+}
+
+// Invert
+.backdrop-invert-0 {
+  --tw-invert: invert(0);
+}
+.backdrop-invert {
+  --tw-backdrop-invert: invert(100%);
+}
+
+// Saturate
+@each $value in $saturate-values {
+  .backdrop-saturate-#{$value} {
+    --tw-backdrop-saturate: saturate(#{math.div($value, 100)});
+  }
+}
+
+// Sepia
+.backdrop-sepia-0 {
+  --tw-backdrop-sepia: sepia(0);
+}
+.backdrop-sepia {
+  --tw-backdrop-sepia: sepia(100%);
+}

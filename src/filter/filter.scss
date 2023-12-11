@@ -1,0 +1,138 @@
+@use "sass:list";
+@use "sass:math";
+
+$blur-maps: (
+  "-none": 0,
+  "-sm": 4px,
+  "": 8px,
+  "-md": 12px,
+  "-lg": 16px,
+  "-xl": 24px,
+  "-2xl": 40px,
+  "-3xl": 64px,
+);
+$brightness-values: 0 50 75 90 95 100 105 110 125 150 200;
+$contrast-values: 0 50 75 100 125 150 200;
+$drop-shadow-maps: (
+  "-sm": drop-shadow(0 1px 1px rgba(0 0 0 / 0.05)),
+  "": drop-shadow(0 1px 2px rgba(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06)),
+  "-md": drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06)),
+  "-lg": drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)),
+  "-xl": drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08)),
+  "-2xl": drop-shadow(0 25px 25px rgb(0 0 0 / 0.15)),
+  "-none": drop-shadow(0 0 #0000),
+);
+$hue-rotate-values: 0 15 30 60 90 180;
+$saturate-values: 0 50 75 100 125 150 200;
+
+$classes: (
+  ".grayscale-0",
+  ".grayscale",
+  ".invert-0",
+  ".invert",
+  ".sepia-0",
+  ".sepia"
+);
+@each $key, $value in $blur-maps {
+  $classes: list.append($classes, ".blur#{$key}", $separator: comma);
+}
+@each $value in $brightness-values {
+  $classes: list.append($classes, ".brightness-#{$value}", $separator: comma);
+}
+@each $value in $contrast-values {
+  $classes: list.append($classes, ".contrast-#{$value}", $separator: comma);
+}
+@each $key, $value in $drop-shadow-maps {
+  $classes: list.append($classes, ".drop-shadow#{$key}", $separator: comma);
+}
+@each $value in $hue-rotate-values {
+  $classes: list.append($classes, ".hue-rotate-#{$value}", $separator: comma);
+}
+@each $value in $saturate-values {
+  $classes: list.append($classes, ".saturate-#{$value}", $separator: comma);
+}
+#{$classes} {
+  --tw-blur: blur(0);
+  --tw-brightness: brightness(1);
+  --tw-contrast: contrast(1);
+  --tw-drop-shadow: drop-shadow(0 0 #0000);
+  --tw-grayscale: grayscale(0);
+  --tw-hue-rotate: hue-rotate(0deg);
+  --tw-invert: invert(0);
+  --tw-saturate: saturate(1);
+  --tw-sepia: sepia(0);
+
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-drop-shadow) var(--tw-grayscale) var(--tw-hue-rotate)
+    var(--tw-invert) var(--tw-saturate) var(--tw-sepia);
+}
+
+// Blur
+@each $key, $value in $blur-maps {
+  .blur#{$key} {
+    --tw-blur: blur(#{$value});
+  }
+}
+
+// Brightness
+@each $value in $brightness-values {
+  .brightness-#{$value} {
+    --tw-brightness: brightness(#{math.div($value, 100)});
+  }
+}
+
+// Contrast
+@each $value in $contrast-values {
+  .contrast-#{$value} {
+    --tw-contrast: contrast(#{math.div($value, 100)});
+  }
+}
+
+// Drop shadow
+@each $key, $value in $drop-shadow-maps {
+  .drop-shadow#{$key} {
+    --tw-drop-shadow: #{$value};
+  }
+}
+
+// Grayscale
+.grayscale-0 {
+  --tw-grayscale: grayscale(0);
+}
+.grayscale {
+  --tw-grayscale: grayscale(100%);
+}
+
+// Hue rotate
+@each $value in $hue-rotate-values {
+  .hue-rotate-#{$value} {
+    --tw-hue-rotate: hue-rotate(#{$value}deg);
+  }
+}
+
+// Invert
+.invert-0 {
+  --tw-invert: invert(0);
+}
+.invert {
+  --tw-invert: invert(100%);
+}
+
+// Saturate
+@each $value in $saturate-values {
+  .saturate-#{$value} {
+    --tw-saturate: saturate(#{math.div($value, 100)});
+  }
+}
+
+// Sepia
+.sepia-0 {
+  --tw-sepia: sepia(0);
+}
+.sepia {
+  --tw-sepia: sepia(100%);
+}
