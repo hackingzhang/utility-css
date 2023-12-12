@@ -1,0 +1,7 @@
+$stroke-width-values: 0 1 2;
+
+@each $value in $stroke-width-values {
+  .stroke-#{$value} {
+    stroke-width: $value;
+  }
+}

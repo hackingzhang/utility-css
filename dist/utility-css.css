@@ -7661,7 +7661,7 @@
 }
 
 .text-current {
-  color: "currentColor";
+  color: currentColor;
 }
 
 .text-transparent {
@@ -11503,4 +11503,64 @@
 
 .backdrop-sepia {
   --tw-backdrop-sepia: sepia(100%);
+}
+
+.fill-none {
+  fill: none;
+}
+
+.fill-inherit {
+  fill: inherit;
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.fill-transparent {
+  fill: transparent;
+}
+
+.fill-black {
+  fill: #000;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
+.stroke-none {
+  stroke: none;
+}
+
+.stroke-inherit {
+  stroke: inherit;
+}
+
+.stroke-current {
+  stroke: currentColor;
+}
+
+.stroke-transparent {
+  stroke: transparent;
+}
+
+.stroke-black {
+  stroke: #000;
+}
+
+.stroke-white {
+  stroke: #fff;
+}
+
+.stroke-0 {
+  stroke-width: 0;
+}
+
+.stroke-1 {
+  stroke-width: 1;
+}
+
+.stroke-2 {
+  stroke-width: 2;
 }
