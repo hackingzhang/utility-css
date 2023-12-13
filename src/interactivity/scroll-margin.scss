@@ -1,0 +1,33 @@
+@use "../variable.scss" as variable;
+
+@each $key, $value in variable.$size-option-map {
+  .scroll-m-#{$key} {
+    scroll-margin: $value;
+  }
+  .scroll-mx-#{$key} {
+    scroll-margin-left: $value;
+    scroll-margin-right: $value;
+  }
+  .scroll-my-#{$key} {
+    scroll-margin-top: $value;
+    scroll-margin-bottom: $value;
+  }
+  .scroll-ms-#{$key} {
+    scroll-margin-inline-start: $value;
+  }
+  .scroll-me-#{$key} {
+    scroll-margin-inline-end: $value;
+  }
+  .scroll-mt-#{$key} {
+    scroll-margin-top: $value;
+  }
+  .scroll-mr-#{$key} {
+    scroll-margin-right: $value;
+  }
+  .scroll-mb-#{$key} {
+    scroll-margin-bottom: $value;
+  }
+  .scroll-ml-#{$key} {
+    scroll-margin-left: $value;
+  }
+}

@@ -1,0 +1,20 @@
+.snap {
+  &-none {
+    scroll-snap-type: none;
+  }
+  &-x {
+    scroll-snap-type: x var(--tw-scroll-snap-strictness);
+  }
+  &-y {
+    scroll-snap-type: y var(--tw-scroll-snap-strictness);
+  }
+  &-both {
+    scroll-snap-type: both var(--tw-scroll-snap-strictness);
+  }
+  &-mandatory {
+    --tw-scroll-snap-strictness: mandatory;
+  }
+  &-proximity {
+    --tw-scroll-snap-strictness: proximity;
+  }
+}

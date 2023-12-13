@@ -1,0 +1,12 @@
+$will-change-maps: (
+  "auto": auto,
+  "scroll": scroll-position,
+  "contents": contents,
+  "transform": transform,
+);
+
+@each $key, $value in $will-change-maps {
+  .will-change-#{$key} {
+    will-change: $value;
+  }
+}

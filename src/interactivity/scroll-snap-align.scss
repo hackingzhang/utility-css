@@ -1,0 +1,11 @@
+$snap-align-values: start end center;
+
+@each $value in $snap-align-values {
+  .snap-#{$value} {
+    scroll-snap-align: $value;
+  }
+}
+
+.snap-align-none {
+  scroll-snap-align: none;
+}

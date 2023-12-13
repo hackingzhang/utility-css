@@ -1,0 +1,33 @@
+@use "../variable.scss" as variable;
+
+@each $key, $value in variable.$size-option-map {
+  .scroll-p-#{$key} {
+    scroll-padding: $value;
+  }
+  .scroll-px-#{$key} {
+    scroll-padding-left: $value;
+    scroll-padding-right: $value;
+  }
+  .scroll-py-#{$key} {
+    scroll-padding-top: $value;
+    scroll-padding-bottom: $value;
+  }
+  .scroll-ps-#{$key} {
+    scroll-padding-inline-start: $value;
+  }
+  .scroll-pe-#{$key} {
+    scroll-padding-inline-end: $value;
+  }
+  .scroll-pt-#{$key} {
+    scroll-padding-top: $value;
+  }
+  .scroll-pr-#{$key} {
+    scroll-padding-right: $value;
+  }
+  .scroll-pb-#{$key} {
+    scroll-padding-bottom: $value;
+  }
+  .scroll-pl-#{$key} {
+    scroll-padding-left: $value;
+  }
+}
