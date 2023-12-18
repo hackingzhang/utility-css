@@ -4,10 +4,10 @@
   .gap-#{$key} {
     gap: $value;
   }
-  .gap-x-#{key} {
+  .gap-x-#{$key} {
     column-gap: $value;
   }
-  .gap-y-#{key} {
+  .gap-y-#{$key} {
     row-gap: $value;
   }
 }
