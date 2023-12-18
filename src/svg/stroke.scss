@@ -1,16 +1,18 @@
-$color-map: (
-  "none": none,
-  "inherit": inherit,
-  "current": currentColor,
-  "transparent": transparent,
-  "black": #000,
-  "white": #fff,
-);
+@use "../mixins/color.scss" as color-mixin;
 
-@each $key, $value in $color-map {
-  .stroke-#{$key} {
-    stroke: $value;
+.stroke {
+  &-none {
+    stroke: none;
+  }
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      stroke: $value;
+    }
+  }
+
+  @include color-mixin.colorful() using ($color-name, $strength, $color) {
+    &-#{$color-name}-#{$strength} {
+      stroke: $color;
+    }
   }
 }
-
-// TODO: More color

@@ -1,15 +1,15 @@
-$color-map: (
-  "inherit": inherit,
-  "current": currentColor,
-  "transparent": transparent,
-  "black": #000,
-  "white": #fff,
-);
+@use "../mixins/color.scss" as color-mixin;
 
-@each $key, $value in $color-map {
-  .caret-#{$key} {
-    caret-color: $value;
+.caret {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      caret-color: $value;
+    }
+  }
+
+  @include color-mixin.colorful() using ($color-name, $strength, $color) {
+    &-#{$color-name}-#{$strength} {
+      caret-color: $color;
+    }
   }
 }
-
-// TODO: More color

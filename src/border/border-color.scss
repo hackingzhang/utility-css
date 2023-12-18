@@ -1,41 +1,115 @@
-$border-color-map: (
-  "inherit": inherit,
-  "current": currentColor,
-  "transparent": transparent,
-  "black": rgb(0, 0, 0),
-  "white": rgb(255, 255, 255),
-);
+@use "../mixins/color.scss" as color-mixin;
 
-@each $key, $value in $border-color-map {
-  .border-#{$key} {
-    border-color: $value;
+.border {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      border-color: $value;
+    }
   }
-  .border-x-#{key} {
-    border-left-color: $value;
-    border-right-color: $value;
+  @include color-mixin.colorful() using ($color-name, $strength, $color) {
+    &-#{$color-name}-#{$strength} {
+      border-color: $color;
+    }
   }
-  .border-y-#{key} {
-    border-top-color: $value;
-    border-bottom-color: $value;
+
+  &-x {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-left-color: $value;
+        border-right-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-left-color: $color;
+        border-right-color: $color;
+      }
+    }
   }
-  .border-s-#{key} {
-    border-inline-start-color: $value;
+  &-y {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-top-color: $value;
+        border-bottom-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-top-color: $color;
+        border-bottom-color: $color;
+      }
+    }
   }
-  .border-e-#{key} {
-    border-inline-end-color: $value;
+  &-s {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-inline-start-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-inline-start-color: $color;
+      }
+    }
   }
-  .border-t-#{key} {
-    border-top-color: $value;
+  &-e {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-inline-end-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-inline-end-color: $color;
+      }
+    }
   }
-  .border-r-#{key} {
-    border-right-color: $value;
+  &-t {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-top-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-top-color: $color;
+      }
+    }
   }
-  .border-b-#{key} {
-    border-bottom-color: $value;
+  &-r {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-right-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-right-color: $color;
+      }
+    }
   }
-  .border-l-#{key} {
-    border-left-color: $value;
+  &-b {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-bottom-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-bottom-color: $color;
+      }
+    }
+  }
+  &-l {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-left-color: $value;
+      }
+    }
+    @include color-mixin.colorful() using ($color-name, $strength, $color) {
+      &-#{$color-name}-#{$strength} {
+        border-left-color: $color;
+      }
+    }
   }
 }
-
-// TODO: More color

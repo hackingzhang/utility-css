@@ -1,15 +1,15 @@
-$text-color-map: (
-  "inherit": inherit,
-  "current": currentColor,
-  "transparent": transparent,
-  "black": black,
-  "white": white,
-);
+@use "../mixins/color.scss" as color-mixin;
 
-@each $key, $value in $text-color-map {
-  .text-#{$key} {
-    color: $value;
+.text {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      color: $value;
+    }
+  }
+
+  @include color-mixin.colorful() using ($color-name, $strength, $color) {
+    &-#{$color-name}-#{$strength} {
+      color: $color;
+    }
   }
 }
-
-// TODO: More color
