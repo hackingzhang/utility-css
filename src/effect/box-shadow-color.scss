@@ -1,14 +1,36 @@
-$color-map: (
-  "inherit": inherit,
-  "current": currentColor,
-  "transparent": transparent,
-  "black": rgb(0, 0, 0),
-  "white": rgb(255, 255, 255),
-);
+@use "sass:list";
+@use "../mixins/color.scss" as color-mixin;
 
-@each $key, $value in $color-map {
-  .shadow-#{$key} {
-    --tw-shadow-color: #{$value};
-    --tw-shadow: var(--tw-shadow-colored);
+$classes: ();
+@include color-mixin.basic-color() using ($prop, $value) {
+  $classes: list.append(
+    $classes,
+    ".shadow-#{$prop}",
+    $separator: comma
+  ) !global;
+}
+@include color-mixin.colorful() using ($color-name, $strength, $color) {
+  $classes: list.append(
+    $classes,
+    ".shadow-#{$color-name}-#{$strength}",
+    $separator: comma
+  ) !global;
+}
+
+#{$classes} {
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      --tw-shadow-color: #{$value};
+    }
+  }
+
+  @include color-mixin.colorful() using ($color-name, $strength, $color) {
+    &-#{$color-name}-#{$strength} {
+      --tw-shadow-color: #{$color};
+    }
   }
 }
