@@ -1,5 +1,3 @@
-@use "../mixins/color.scss" as color-mixin;
-
 // decoration line
 $text-decoration-line-map: (
   "underline": underline,
@@ -11,21 +9,6 @@ $text-decoration-line-map: (
 @each $key, $value in $text-decoration-line-map {
   .#{$key} {
     text-decoration-line: $value;
-  }
-}
-
-// text decoration color
-.decoration {
-  @include color-mixin.basic-color() using ($prop, $value) {
-    &-#{$prop} {
-      text-decoration-color: $value;
-    }
-  }
-
-  @include color-mixin.colorful() using ($color-name, $strength, $color) {
-    &-#{$color-name}-#{$strength} {
-      text-decoration-color: $color;
-    }
   }
 }
 

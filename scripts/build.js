@@ -13,10 +13,29 @@ if (fs.existsSync(distPath)) {
 
 // compile & output
 const srcPath = path.resolve(__dirname, "../src/");
-const result = sass.compile(path.resolve(srcPath, "index.scss"));
-fs.writeFileSync(path.resolve(distPath, "utility-css.css"), result.css);
 
-const compressed = sass.compile(path.resolve(srcPath, "index.scss"), {
-  style: "compressed",
-});
-fs.writeFileSync(path.resolve(distPath, "utility-css.min.css"), compressed.css);
+// full version
+const fullEntry = path.resolve(srcPath, "full.scss");
+const fullResult = sass.compile(fullEntry);
+fs.writeFileSync(
+  path.resolve(distPath, "utility-css.full.css"),
+  fullResult.css
+);
+const fullCompressed = sass.compile(fullEntry, { style: "compressed" });
+fs.writeFileSync(
+  path.resolve(distPath, "utility-css.full.min.css"),
+  fullCompressed.css
+);
+
+// basic version
+const basicEntry = path.resolve(srcPath, "basic.scss");
+const basicResult = sass.compile(basicEntry);
+fs.writeFileSync(
+  path.resolve(distPath, "utility-css.basic.css"),
+  basicResult.css
+);
+const basicCompressed = sass.compile(basicEntry, { style: "compressed" });
+fs.writeFileSync(
+  path.resolve(distPath, "utility-css.basic.min.css"),
+  basicCompressed.css
+);

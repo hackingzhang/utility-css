@@ -1,0 +1,15 @@
+@use "../mixins/color.scss" as color-mixin;
+
+.decoration {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      text-decoration-color: $value;
+    }
+  }
+
+  @include color-mixin.colorful() using ($color-name, $strength, $color) {
+    &-#{$color-name}-#{$strength} {
+      text-decoration-color: $color;
+    }
+  }
+}
