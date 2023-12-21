@@ -8,7 +8,7 @@ $height-option-map: map.merge(
 $height-option-map: map.merge(
   $height-option-map,
   (
-    "full": "100%",
+    "full": 100%,
     "auto": auto,
     "screen": 100vh,
     "min": min-content,
