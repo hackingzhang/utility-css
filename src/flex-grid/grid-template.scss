@@ -7,13 +7,19 @@
 .grid-cols-none {
   grid-template-columns: none;
 }
+.grid-cols-subgrid {
+  grid-template-columns: subgrid;
+}
 
 // Grid Template Rows
-@for $i from 1 through 6 {
+@for $i from 1 through 12 {
   .grid-rows-#{$i} {
     grid-template-rows: repeat($i, minmax(0, 1fr));
   }
 }
 .grid-rows-none {
   grid-template-rows: none;
+}
+.grid-rows-subgrid {
+  grid-template-rows: subgrid;
 }

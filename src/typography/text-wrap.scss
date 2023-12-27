@@ -1,0 +1,7 @@
+$text-wrap-values: wrap nowrap balance pretty;
+
+@each $value in $text-wrap-values {
+  .text-#{$value} {
+    text-wrap: $value;
+  }
+}

@@ -1,26 +1,23 @@
 @use "sass:map";
 @use "../variable.scss" as variable;
 
-$width-option-map: map.merge(
+$size-option-map: map.merge(
   variable.$size-option-map,
   variable.$size-option-percent-map
 );
-$width-option-map: map.merge(
-  $width-option-map,
+$size-option-map: map.merge(
+  $size-option-map,
   (
     "auto": auto,
-    "screen": 100vw,
-    "svw": 100svw,
-    "lvw": 100lvw,
-    "dvw": 100dvw,
     "min": min-content,
     "max": max-content,
     "fit": fit-content,
   )
 );
 
-@each $key, $value in $width-option-map {
-  .w-#{$key} {
+@each $key, $value in $size-option-map {
+  .size-#{$key} {
     width: $value;
+    height: $value;
   }
 }
