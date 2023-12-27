@@ -1,9 +1,14 @@
-$min-width-map: (
-  "0": 0px,
-  "full": 100%,
-  "min": min-content,
-  "max": max-content,
-  "fit": fit-content,
+@use "sass:map";
+@use "../variable.scss" as variable;
+
+$min-width-map: map.merge(
+  variable.$size-option-map,
+  (
+    "full": 100%,
+    "min": min-content,
+    "max": max-content,
+    "fit": fit-content,
+  )
 );
 
 @each $key, $value in $min-width-map {
