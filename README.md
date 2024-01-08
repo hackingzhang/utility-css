@@ -28,7 +28,7 @@ Basic build version is about 112KB after compressed, and does not includes the f
 - all accessibility utilities
 - all color palette related utilities
 
-  Utilities like text-slant-_ or bg-yellow-_ is not included, but text-current, bg-white is. Generally, these color values are included in basic build: inherit, currentColor, transparent, black(#000) and white(#fff).
+  Utilities like text-slant-\* or bg-yellow-\* is not included, but text-current, bg-white is. Generally, these color values are included in basic build: inherit, currentColor, transparent, black(#000) and white(#fff).
 
 - font-variant-numeric utilities
 - hyphens utilities
