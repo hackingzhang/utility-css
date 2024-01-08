@@ -1,2 +1,8 @@
+// following utilities are not included in basic build:
+//
+// mix-blend utilities
+// background-blend utilities
+
 @use "./box-shadow.scss";
+@use "./box-shadow-color.basic.scss";
 @use "./opacity.scss";

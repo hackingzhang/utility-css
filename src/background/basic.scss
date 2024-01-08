@@ -1,5 +1,11 @@
+// In contrast to the full build, the basic build does not
+// contain the following utilities：
+// 
+// gradient utilities
+
 @use "./background-attachment.scss";
 @use "./background-clip.scss";
+@use "./background-color.basic.scss";
 @use "./background-origin.scss";
 @use "./background-position.scss";
 @use "./background-repeat.scss";

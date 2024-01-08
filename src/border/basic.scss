@@ -1,7 +1,15 @@
+// following utilities are not included in basic build:
+//
+// all outline utilities
+
 @use "./border-radius.scss";
 @use "./border-width.scss";
+@use "./border-color.basic.scss";
 @use "./border-style.scss";
 @use "./divide-width.scss";
+@use "./divide-color.basic.scss";
 @use "./divide-style.scss";
 @use "./ring-width.scss";
+@use "./ring-color.basic.scss";
 @use "./ring-offset-width.scss";
+@use "./ring-offset-color.basic.scss";

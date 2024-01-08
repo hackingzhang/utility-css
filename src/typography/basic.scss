@@ -1,3 +1,8 @@
+// following utilities are not included in basic build:
+//
+// font-variant-numeric utilities
+// hyphens utilities
+
 @use "./font-family.scss";
 @use "./font-size.scss";
 @use "./font-smoothing.scss";
@@ -8,12 +13,14 @@
 @use "./line-height.scss";
 @use "./list-style.scss";
 @use "./text-align.scss";
+@use "./text-color.basic.scss";
 @use "./text-decoration.scss";
+@use "./text-decoration-color.basic.scss";
 @use "./text-transform.scss";
 @use "./text-overflow.scss";
+@use "./text-wrap.scss";
 @use "./text-indent.scss";
 @use "./vertical-align.scss";
 @use "./whitespace.scss";
 @use "./word-break.scss";
-@use "./hyphens.scss";
 @use "./content.scss";

@@ -1,0 +1,68 @@
+@use "../mixins/color.scss" as color-mixin;
+
+.border {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      border-color: $value;
+    }
+  }
+
+  &-x {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-left-color: $value;
+        border-right-color: $value;
+      }
+    }
+  }
+  &-y {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-top-color: $value;
+        border-bottom-color: $value;
+      }
+    }
+  }
+  &-s {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-inline-start-color: $value;
+      }
+    }
+  }
+  &-e {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-inline-end-color: $value;
+      }
+    }
+  }
+  &-t {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-top-color: $value;
+      }
+    }
+  }
+  &-r {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-right-color: $value;
+      }
+    }
+  }
+  &-b {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-bottom-color: $value;
+      }
+    }
+  }
+  &-l {
+    @include color-mixin.basic-color() using ($prop, $value) {
+      &-#{$prop} {
+        border-left-color: $value;
+      }
+    }
+  }
+}

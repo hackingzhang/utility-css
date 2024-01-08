@@ -1,3 +1,10 @@
+// following utilities are not included in basic build:
+//
+// aspect-ratio utilities
+// break utilities
+// box-decoration-break utilities
+// isolation utilities
+
 @use "./box-sizing.scss";
 @use "./clear.scss";
 @use "./columns.scss";

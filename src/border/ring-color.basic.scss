@@ -1,0 +1,9 @@
+@use "../mixins/color.scss" as color-mixin;
+
+.ring {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      --tw-ring-color: #{$value};
+    }
+  }
+}

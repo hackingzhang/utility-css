@@ -1,0 +1,9 @@
+@use "../mixins/color.scss" as color-mixin;
+
+.text {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      color: $value;
+    }
+  }
+}

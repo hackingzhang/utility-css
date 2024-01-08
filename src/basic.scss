@@ -1,3 +1,10 @@
+// Relative to the full build version, the following utilities
+// are not included in basic build:
+//
+// all accessibility utilities
+// all color related utilities like bg-slate-500 text-cyan-300 etc.,
+// except basic color properties: inherit, currentColor, transparent, black and white
+
 @use "./layout/basic.scss" as layout;
 @use "./flex-grid/basic.scss" as flex;
 @use "./spacing/basic.scss" as spacing;

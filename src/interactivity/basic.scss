@@ -1,3 +1,13 @@
+// following utilities are not included in basic build:
+//
+// accent-color utilities
+// caret-color utilities
+// pointer-evnets utilities
+// resize utilities
+// scroll-margin utilities
+// scroll-padding utilities
+// scroll-snap-* utilities
+
 @use "./appearance.scss";
 @use "./cursor.scss";
 @use "./scroll-behavior.scss";

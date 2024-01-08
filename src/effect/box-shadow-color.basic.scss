@@ -1,0 +1,23 @@
+@use "sass:list";
+@use "../mixins/color.scss" as color-mixin;
+
+$classes: ();
+@include color-mixin.basic-color() using ($prop, $value) {
+  $classes: list.append(
+    $classes,
+    ".shadow-#{$prop}",
+    $separator: comma
+  ) !global;
+}
+
+#{$classes} {
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow {
+  @include color-mixin.basic-color() using ($prop, $value) {
+    &-#{$prop} {
+      --tw-shadow-color: #{$value};
+    }
+  }
+}
