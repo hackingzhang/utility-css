@@ -11,13 +11,17 @@ CSS part of Tailwind CSS written in SCSS
   ```html
   <link
     rel="stylesheet"
-    href="//unpkg.com/@hackingzhang/utility-css@0.1.0/dist/utility-css.full.min.css"
+    href="https://unpkg.com/@hackingzhang/utility-css@0.1.1/src/css/preflight.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@hackingzhang/utility-css@0.1.1/dist/utility-css.full.min.css"
   />
   ```
 
 - self host
 
-  copy css files under /dist to your project, then import it manualy.
+  copy `/src/css/preflight.css` and css files under `/dist` to your project, then import it manualy.
 
 ## Baisc build and full build version
 
