@@ -1,6 +1,6 @@
 {
   "name": "@hackingzhang/utility-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CSS part of Tailwind CSS",
   "main": "src/index.scss",
   "scripts": {
