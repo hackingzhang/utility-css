@@ -16,6 +16,9 @@
   ],
   "author": "hackingzhang@outlook.com",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "bugs": {
     "url": "https://github.com/hackingzhang/utility-css/issues"
   },
